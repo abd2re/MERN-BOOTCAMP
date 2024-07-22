@@ -6,6 +6,8 @@ const src1 =
   "https://upload.wikimedia.org/wikipedia/commons/4/4c/Blackcat-Lilith.jpg";
 const src2 = "https://d2zp5xs5cp8zlg.cloudfront.net/image-32399-800.jpg";
 
+myImage.setAttribute("src", src1);
+
 myImage.onclick = () => {
   const mySrc = myImage.getAttribute("src");
   if (mySrc === src1) {

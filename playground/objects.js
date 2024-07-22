@@ -1,10 +1,21 @@
-const person = {
-  name: "abd",
-  id: 1343,
-  age: 18,
-  get_info: function () {
-    return this.name + this.id + this.age;
+const Class = {
+  code: 207,
+  name: "Physics",
+  student: {
+    grades: [17, 18, 19],
   },
 };
 
-console.log(person.get_info());
+const { student } = Class;
+
+student.grades.push(14);
+
+const {
+  student: { grades },
+} = Class;
+
+grades.push(11);
+
+console.log(
+  grades === student.grades && student.grades === Class.student.grades
+);
